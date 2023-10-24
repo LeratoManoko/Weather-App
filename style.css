@@ -1,0 +1,82 @@
+body {
+  font-family: arial, sans-serif;
+  background-color: #eeedf7;
+}
+
+h2 {
+  color: black;
+  font-size: 24px;
+  font-weight: 50px;
+  line-height: 20px;
+  margin: 0;
+  font-family: "Marcellus", serif;
+  font-family: "Yeseva One", cursive;
+  position: relative;
+  float: right;
+  right: 0;
+  top: 0;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.weather-app {
+  border: 4px solid #ecf2ff;
+  background-color: #ecf2ff;
+  padding: 40px;
+  margin: 150px auto;
+  border-radius: 16px;
+  max-width: 800px;
+}
+
+.weather-icon {
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+}
+.temperature {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.search-form {
+  margin-bottom: 20px;
+}
+.col {
+  font-family: "Jost", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h3,
+.degrees {
+  font-size: 15px;
+  color: #713abe;
+}
+.sun {
+  position: relative;
+  float: right;
+  right: 0;
+  top: 0;
+}
+.location {
+  background-color: #fbfacd;
+  color: black;
+  border: none;
+  border-radius: 16px;
+}
+.your-city {
+  border-radius: 12px;
+  padding: 7px 100px;
+}
+
+.submit {
+  background-color: #e8ffce;
+  border: none;
+  font-weight: bold;
+}

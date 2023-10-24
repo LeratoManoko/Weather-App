@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <h1>Date</h1>
+        <div class="sun" alt="sun-emoji">
+            <img src="images/clear-sky-day.png.crdownload" alt="sun" />
+          <span class="city" id="temporary-city">Pretoria</span>
+        </br>
+
+          <span class="degrees" id="degrees">30</span> <span class="units">
+             <a href="#" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link"> °F</a></span>
+        </div>
+
+        <br />
+        <form id="search-bar">
+          <input
+            type="text"
+            placeholder="Type City Here"
+            class="your-city"
+            id="search-text-input"
+          />
+          <input type="submit" placeholder="Search" class="submit" />
+          <button onclick="getYourLoc()" class="location">📍</button>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <div class="row">
+            <div class="col">
+              Friday
+              <div>
+                <img src="images/clear-sky-day.png.crdownload"  alt="sun" />
+              </div>
+              <div class="degrees"><strong>30°</strong> 12°</div>
+            </div>
+            <div class="col">
+              Saturday
+              <div>
+                <img  src="images/clear-sky-day.png.crdownload" alt="sun" />
+              </div>
+              <div class="degrees"><strong>29° </strong> 10°</div>
+            </div>
+            <div class="col">
+              Sunday
+              <div>
+                <img src="images/clear-sky-day.png.crdownload"  alt="sun" />
+              </div>
+              <div class="degrees"><strong>28°</strong> 9°</div>
+            </div>
+            <div class="col">
+              Monday
+              <div>
+                <img src="images/few-clouds-day.png.crdownload" alt="cloudy" />
+              </div>
+              <div class="degrees"><strong>25° </strong> 11°</div>
+            </div>
+            <div class="col">
+              Tuesday
+              <div>
+                <img  src="images/few-clouds-day.png.crdownload" alt="cloudy" />
+              </div>
+              <div class="degrees"><strong>28°</strong> 14°</div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
