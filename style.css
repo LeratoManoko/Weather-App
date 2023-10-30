@@ -1,6 +1,6 @@
 body {
   font-family: arial, sans-serif;
-  background-color: #eeedf7;
+  background-color: #606c64;
 }
 
 h2 {
@@ -24,8 +24,8 @@ h1 {
 }
 
 .weather-app {
-  border: 4px solid #ecf2ff;
-  background-color: #ecf2ff;
+  border: 4px solid #4a534d;
+  background-color: #4a534d;
   padding: 40px;
   margin: 150px auto;
   border-radius: 16px;
