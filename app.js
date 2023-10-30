@@ -48,7 +48,6 @@ function searchCity(city) {
 //search-engine
 
 function displayWeatherCondition(response) {
-  console.log(response.data);
   let cityElement = document.querySelector("#temporary-city");
   cityElement.innerHTML = response.data.name;
   let temperatureElement = document.querySelector("#degrees");
@@ -59,12 +58,6 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-}
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let degreesElement = document.querySelector("#degrees");
-  degreesElement.innerHTML = 66;
 }
 
 function convertToCelsius(event) {
