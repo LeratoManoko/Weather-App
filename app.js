@@ -30,6 +30,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 h1.innerHTML = `${day} ${date}  ${month} ${2023}, ${hours}:${minutes}`;
+
 //search let
 
 function search(event) {
@@ -52,6 +53,12 @@ function displayWeatherCondition(response) {
   cityElement.innerHTML = response.data.name;
   let temperatureElement = document.querySelector("#degrees");
   temperatureElement.innerHTML = response.data.main.temp;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function convertToFahrenheit(event) {
