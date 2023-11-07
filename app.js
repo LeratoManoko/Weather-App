@@ -31,7 +31,10 @@ let months = [
 let month = months[now.getMonth()];
 h1.innerHTML = `${day} ${date}  ${month} ${2023}, ${hours}:${minutes}`;
 let humidityElement = document.querySelector("#humidity");
-let windSpeedElement = document.querySelector("#wind-speed");
+let windSpeedElement = document.querySelector("#wind");
+
+humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+windElement.innerHTML = `${response.data.wind.speed}km/h`;
 
 //search let
 
@@ -80,6 +83,4 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 function displayWind(event) {
   event.preventDefault();
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windElement.innerHTML = `${response.data.wind.speed}km/h`;
 }
