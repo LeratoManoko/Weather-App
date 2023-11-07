@@ -78,8 +78,8 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 function showWind(event) {
   let humidityElement = document.querySelector("#humidity");
-  let windSpeedElement = document.querySelector("#wind");
+  let windSpeedElement = document.querySelector("#wind-speed");
 
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind}km/h`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
 }
