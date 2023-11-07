@@ -60,19 +60,37 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-//wind and humidity
-function displayWind(event){
-  event.preventDefault();
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind-speed");
-
-  humidityElement.innerHTML =`$(response.data.temperature.humidity)%`;
-}
-
 function convertToCelsius(event) {
   event.preventDefault();
   let degreesElement = document.querySelector("#degrees");
   degreesElement.innerHTML = 19;
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="forecast">
+        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature">
+            <strong>15º</strong>
+          </div>
+          <div class="weather-forecast-temperature">9º</div>
+        </div>
+      </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let form = document.querySelector("#search-bar");
@@ -84,12 +102,3 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
-
-function showWind(event) {
-  event.preventDefault();
-  let humidityElement = document.querySelector("#humidity");
-  let windSpeedElement = document.querySelector("#wind-speed");
-
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-}
