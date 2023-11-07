@@ -1,3 +1,6 @@
+let humidityElement = document.querySelector("#humidity");
+let windSpeedElement = document.querySelector("#wind");
+
 let now = new Date();
 let h1 = document.querySelector("h1");
 let date = now.getDate();
@@ -30,8 +33,6 @@ let months = [
 ];
 let month = months[now.getMonth()];
 h1.innerHTML = `${day} ${date}  ${month} ${2023}, ${hours}:${minutes}`;
-let humidityElement = document.querySelector("#humidity");
-let windSpeedElement = document.querySelector("#wind");
 
 humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 windElement.innerHTML = `${response.data.wind.speed}km/h`;
