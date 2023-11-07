@@ -60,6 +60,15 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+//wind and humidity
+function displayWind(event){
+  event.preventDefault();
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind-speed");
+
+  humidityElement.innerHTML =`$(response.data.temperature.humidity)%`;
+}
+
 function convertToCelsius(event) {
   event.preventDefault();
   let degreesElement = document.querySelector("#degrees");
